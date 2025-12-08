@@ -1,5 +1,5 @@
 ---
-description: Manage the iMessage auto-reply daemon (start, stop, or check status)
+description: "Manage the iMessage auto-reply daemon. Usage: /imessage-daemon [start|stop|status] (defaults to status)"
 ---
 
 # iMessage Daemon Management
