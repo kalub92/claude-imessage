@@ -37,14 +37,14 @@ The daemon creates a continuous conversation thread with Claude Code over iMessa
 
 ### 2. Configure the Daemon
 
-Create a configuration file with your contact details:
+Create a configuration file with the contact details of the person who will message the agent (the agent will respond to messages from this contact):
 
 ```bash
 # Create config file
 cat > ~/.claude-imessage.env << 'EOF'
-export IMESSAGE_CONTACT_PHONE="4155551234"      # Phone number (digits only)
-export IMESSAGE_CONTACT_NAME="John Doe"         # Display name
-export IMESSAGE_CONTACT_EMAIL="john@example.com"  # Optional: if using iMessage email
+export IMESSAGE_CONTACT_PHONE="4155551234"      # Their phone number (digits only)
+export IMESSAGE_CONTACT_NAME="John Doe"         # Their name
+export IMESSAGE_CONTACT_EMAIL="john@example.com"  # Optional: their iMessage email
 EOF
 
 # Load the configuration
@@ -162,9 +162,9 @@ Configure the daemon via environment variables in `~/.claude-imessage.env`:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `IMESSAGE_CONTACT_PHONE` | Yes | Phone number to monitor (digits only) |
-| `IMESSAGE_CONTACT_NAME` | Yes | Display name of contact |
-| `IMESSAGE_CONTACT_EMAIL` | No | Email if they use iMessage email |
+| `IMESSAGE_CONTACT_PHONE` | Yes | Phone number of the person who will message the agent (digits only) |
+| `IMESSAGE_CONTACT_NAME` | Yes | Name of the person who will message the agent |
+| `IMESSAGE_CONTACT_EMAIL` | No | iMessage email of the person (if they use email for iMessage) |
 | `IMESSAGE_CHECK_INTERVAL` | No | Check interval in seconds (default: 1) |
 | `IMESSAGE_TMP_DIR` | No | Directory for logs (default: ~/tmp/imessage) |
 
