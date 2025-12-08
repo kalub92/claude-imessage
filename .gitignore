@@ -1,0 +1,35 @@
+# Environment and configuration
+.env
+*.env
+!examples/.env.example
+
+# Logs and temporary files
+tmp/
+*.log
+*.pid
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Conversation state
+imessage_claude_conversation_id.txt
+processed_imessages.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules if any
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
