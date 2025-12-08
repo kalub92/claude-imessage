@@ -13,7 +13,7 @@ This plugin adds iMessage capabilities to Claude Code, allowing you to:
 
 The daemon creates a continuous conversation thread with Claude Code over iMessage, making it accessible from iPhone, iPad, Mac, or Apple Watch.
 
-## Installation
+## Installation & Setup
 
 ### Prerequisites
 
@@ -21,7 +21,7 @@ The daemon creates a continuous conversation thread with Claude Code over iMessa
 - Claude Code installed ([get Claude Code](https://code.claude.com))
 - Full Disk Access permission for Terminal (System Preferences > Security & Privacy > Privacy > Full Disk Access)
 
-### Install the Plugin
+### 1. Install the Plugin
 
 ```bash
 # In any Claude Code session
@@ -29,7 +29,43 @@ The daemon creates a continuous conversation thread with Claude Code over iMessa
 /plugin install imessage@dvdsgl
 ```
 
-That's it! The iMessage skill and daemon management commands are now available.
+### 2. Configure the Daemon
+
+Create a configuration file with your contact details:
+
+```bash
+# Create config file
+cat > ~/.claude-imessage.env << 'EOF'
+export IMESSAGE_CONTACT_PHONE="4155551234"      # Phone number (digits only)
+export IMESSAGE_CONTACT_NAME="John Doe"         # Display name
+export IMESSAGE_CONTACT_EMAIL="john@example.com"  # Optional: if using iMessage email
+EOF
+
+# Load the configuration
+source ~/.claude-imessage.env
+```
+
+### 3. Start the Daemon
+
+In any Claude Code session:
+
+```bash
+/imessage-daemon start
+```
+
+The daemon is now running and monitoring for messages from your configured contact!
+
+### 4. Send a Message
+
+Send an iMessage from your configured contact's phone, and watch Claude respond autonomously.
+
+### 5. Manage the Daemon
+
+```bash
+/imessage-daemon status  # Check if running and view logs
+/imessage-daemon stop    # Stop the daemon
+/imessage-daemon start   # Start the daemon
+```
 
 ## Features
 
@@ -56,46 +92,6 @@ The daemon monitors iMessages and automatically:
 5. Maintains conversation continuity across sessions
 
 The agent has access to all Claude Code capabilities including other skills, tools, and can perform complex multi-step tasks autonomously.
-
-## Quick Start
-
-### 1. Configure the Daemon
-
-Create a configuration file with your contact details:
-
-```bash
-# Create config file
-cat > ~/.claude-imessage.env << 'EOF'
-export IMESSAGE_CONTACT_PHONE="4155551234"      # Phone number (digits only)
-export IMESSAGE_CONTACT_NAME="John Doe"         # Display name
-export IMESSAGE_CONTACT_EMAIL="john@example.com"  # Optional: if using iMessage email
-EOF
-
-# Load the configuration
-source ~/.claude-imessage.env
-```
-
-### 2. Start the Daemon
-
-In any Claude Code session:
-
-```bash
-/imessage-daemon start
-```
-
-The daemon is now running and monitoring for messages from your configured contact!
-
-### 3. Send a Message
-
-Send an iMessage from your configured contact's phone, and watch Claude respond autonomously.
-
-### 4. Manage the Daemon
-
-```bash
-/imessage-daemon status  # Check if running and view logs
-/imessage-daemon stop    # Stop the daemon
-/imessage-daemon start   # Start the daemon
-```
 
 ## Using the iMessage Skill
 
