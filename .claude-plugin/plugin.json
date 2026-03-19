@@ -6,10 +6,7 @@
     "name": "Caleb Stultz",
     "github": "kalub92"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kalub92/claude-imessage"
-  },
+  "repository": "https://github.com/kalub92/claude-imessage",
   "keywords": [
     "imessage",
     "messages",
