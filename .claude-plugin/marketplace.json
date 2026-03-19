@@ -1,0 +1,22 @@
+{
+  "name": "claude-imessage",
+  "owner": {
+    "name": "kalub92"
+  },
+  "metadata": {
+    "description": "iMessage integration for Claude Code - read messages, send replies, and run autonomous agents via iMessage",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "imessage",
+      "source": "./",
+      "description": "iMessage integration for Claude Code - read messages, send replies, and run autonomous agents via iMessage",
+      "version": "1.0.0",
+      "keywords": ["imessage", "messages", "sms", "chat", "automation", "daemon", "agent"],
+      "category": "communication",
+      "skills": "./skills/imessage/",
+      "commands": "./commands/"
+    }
+  ]
+}

@@ -3,12 +3,12 @@
   "description": "iMessage integration for Claude Code - read messages, send replies, and run autonomous agents via iMessage",
   "version": "1.0.0",
   "author": {
-    "name": "David Siegel",
-    "email": "djsiegel@gmail.com"
+    "name": "Caleb Stultz",
+    "github": "kalub92"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvdsgl/claude-imessage"
+    "url": "https://github.com/kalub92/claude-imessage"
   },
   "keywords": [
     "imessage",
@@ -19,5 +19,7 @@
     "daemon",
     "agent"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "skills": "./skills/imessage/",
+  "commands": "./commands/"
 }

@@ -29,8 +29,8 @@ The daemon creates a continuous conversation thread with Claude Code over iMessa
 
 ```bash
 # In any Claude Code session
-/plugin marketplace add dvdsgl/claude-imessage
-/plugin install imessage@dvdsgl
+/plugin marketplace add kalub92/claude-imessage
+/plugin install imessage@claude-imessage
 ```
 
 ### 2. Configure the Daemon
